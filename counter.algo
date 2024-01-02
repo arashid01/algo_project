@@ -21,6 +21,7 @@ VAR
 BEGIN
     Write("Write any sentence.")
     sentence:= c + c;
+    Read(sentence)
 
     //To count the characters
     WHILE (c not ".") DO
