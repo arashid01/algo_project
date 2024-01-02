@@ -1,0 +1,50 @@
+/*
+write an algorithm that read a sentence, 
+which ends with a point, character by character, and to determine:
+The length of the sentence (the number of characters).
+The number of words in the sentence (assuming that the words are separated by a single space).
+The number of vowels in the sentence.
+You have to keep in mind that: 
+Each character will be treated separately.
+The last character is the point.
+Use three variables as counters.
+*/
+
+ALGORITHM counter_algo
+VAR
+    charater_counter: INTEGER;
+    word_counter: INTEGER;
+    vowel_counter: INTEGER;
+    c: CHAR;
+    sentence: STRING;
+
+BEGIN
+    Write("Write any sentence.")
+    sentence:= c + c;
+
+    //To count the characters
+    WHILE (c not ".") DO
+    charater_counter:= 1; // 1 to count the point character as well
+    charater_counter:= charater_counter + 1;
+
+    //To count words seperated by a single space
+    IF (c = " ") THEN
+    word_counter:= 0;
+    word_counter:= word_counter + 1;
+    END_IF
+    
+    //To count vowels (A, E, I, O, U)
+    IF (c = "a" or "e" or "i" or "o" or "u") THEN
+    vowel_counter:= 0;
+    vowel_counter:= vowel_counter + 1;
+    END_IF
+
+    //To end sentence
+    REPEAT
+        Read(sentence)
+    UNTIL (c:= ".")
+    Write(charater_counter)
+    Write(word_counter)
+    Write(vowel_counter)
+
+END
